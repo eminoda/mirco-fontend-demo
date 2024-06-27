@@ -2,10 +2,10 @@
   <div id="app">
     <h2>wujie demo</h2>
 
-    <el-menu class="el-menu-demo" mode="horizontal" router @select="handleSelect">
+    <el-menu class="el-menu-demo" mode="horizontal" :default-active="$route.path" router @select="handleSelect">
       <el-menu-item index="/wujie-home">wujie-home</el-menu-item>
       <el-menu-item index="/subApp/vue2-demo">vue2-demo</el-menu-item>
-      <el-menu-item index="react-demo" router>react-demo</el-menu-item>
+      <el-menu-item index="/subApp/react-demo" router>react-demo</el-menu-item>
     </el-menu>
 
     <router-view />
@@ -17,13 +17,20 @@ export default {
   name: 'App',
   methods: {
     handleSelect(key) {
-      console.log(key)
+      
     },
   },
+  created() {
+    console.log(this.$route)
+  }
 }
 </script>
 
-<style>
+<style scoped lang="less">
+/deep/.el-menu--horizontal > .el-menu-item.is-active {
+  background-color: #409eff;
+  color: #fff;
+}
 h2 {
   text-align: center;
   color: #2c3e50;

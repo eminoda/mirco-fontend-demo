@@ -3,7 +3,10 @@
 </template>
 <script>
 import { startApp } from 'wujie'
-const demoList = [{ name: 'vue2-demo', url: 'http://localhost:8081/', type: 'wujie' }]
+const demoList = [
+  { name: 'vue2-demo', url: 'http://localhost:8081', type: 'wujie' },
+  { name: 'react-demo', url: 'http://localhost:8082', type: 'wujie' },
+]
 export default {
   data() {
     return {}
