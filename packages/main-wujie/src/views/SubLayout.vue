@@ -12,15 +12,22 @@ export default {
     return {}
   },
   computed: {},
-  methods: {},
-  created() {
-    const appName = this.$route.params.appName
-    const { name, url, type } = demoList.find((item) => appName === item.name)
-    if (type === 'wujie') {
-      this.$nextTick(() => {
+  methods: {
+    loadApp(appName) {
+      const { name, url, type } = demoList.find((item) => appName === item.name)
+      if (type === 'wujie') {
         startApp({ name, url, el: document.querySelector('#wujie'), sync: true })
-      })
-    }
+      }
+    },
+  },
+  watch: {
+    $route(newVal) {
+      const appName = newVal.params.appName
+      this.loadApp(appName)
+    },
+  },
+  mounted() {
+    this.loadApp(this.$route.params.appName)
   },
 }
 </script>

@@ -16,13 +16,11 @@
 export default {
   name: 'App',
   methods: {
-    handleSelect(key) {
-      
-    },
+    handleSelect() {},
   },
   created() {
     console.log(this.$route)
-  }
+  },
 }
 </script>
 
