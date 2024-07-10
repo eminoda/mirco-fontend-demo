@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start:wujie": "cd ./packages/main-wujie & npm run serve",
+    "build:wujie": "cd ./packages/main-wujie & npm run build",
     "start:vue2": "cd ./packages/vue2-demo & npm run serve",
     "start:react": "cd ./packages/react-demo & npm run start",
+    "start:vue2-component": "cd ./components/vue2-component & npm run serve",
+    "build:vue2-component": "cd ./components/vue2-component & npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

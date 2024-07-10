@@ -7,10 +7,10 @@ export default new Router({
   mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
-    {
-      path: '',
-      redirect: '/wujie-home',
-    },
+    // {
+    //   path: '',
+    //   redirect: '/wujie-home',
+    // },
     {
       path: '/wujie-home',
       component: () => import('@/views/HomeView'),

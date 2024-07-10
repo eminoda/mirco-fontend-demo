@@ -22,6 +22,40 @@ importers:
         specifier: '7'
         version: 7.3.0(less@4.2.0)(webpack@5.92.1)
 
+  components/vue2-component:
+    dependencies:
+      core-js:
+        specifier: ^3.8.3
+        version: 3.37.1
+      vue:
+        specifier: ^2.6.14
+        version: 2.7.16
+    devDependencies:
+      '@babel/core':
+        specifier: ^7.12.16
+        version: 7.24.7
+      '@babel/eslint-parser':
+        specifier: ^7.12.16
+        version: 7.24.7(@babel/core@7.24.7)(eslint@7.32.0)
+      '@vue/cli-plugin-babel':
+        specifier: ~5.0.0
+        version: 5.0.8(@vue/cli-service@5.0.8(@vue/compiler-sfc@3.4.30)(ejs@3.1.10)(less-loader@7.3.0(less@4.2.0)(webpack@5.92.1))(lodash@4.17.21)(underscore@1.12.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.2.3))(core-js@3.37.1)(vue@2.7.16)
+      '@vue/cli-plugin-eslint':
+        specifier: ~5.0.0
+        version: 5.0.8(@vue/cli-service@5.0.8(@vue/compiler-sfc@3.4.30)(ejs@3.1.10)(less-loader@7.3.0(less@4.2.0)(webpack@5.92.1))(lodash@4.17.21)(underscore@1.12.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.2.3))(eslint@7.32.0)
+      '@vue/cli-service':
+        specifier: ~5.0.0
+        version: 5.0.8(@vue/compiler-sfc@3.4.30)(ejs@3.1.10)(less-loader@7.3.0(less@4.2.0)(webpack@5.92.1))(lodash@4.17.21)(underscore@1.12.1)(vue-template-compiler@2.7.16)(vue@2.7.16)(webpack-sources@3.2.3)
+      eslint:
+        specifier: ^7.32.0
+        version: 7.32.0
+      eslint-plugin-vue:
+        specifier: ^8.0.3
+        version: 8.7.1(eslint@7.32.0)
+      vue-template-compiler:
+        specifier: ^2.6.14
+        version: 2.7.16
+
   packages/main-wujie:
     dependencies:
       core-js:
@@ -58,6 +92,9 @@ importers:
       eslint-plugin-vue:
         specifier: ^8.0.3
         version: 8.7.1(eslint@7.32.0)
+      external-remotes-plugin:
+        specifier: ^1.0.0
+        version: 1.0.0(webpack@5.92.1)
       vue-template-compiler:
         specifier: ^2.6.14
         version: 2.7.16
@@ -3240,6 +3277,11 @@ packages:
   express@4.19.2:
     resolution: {integrity: sha512-5T6nhjsT+EOMzuck8JjBHARTHfMht0POzlA60WV2pMD3gyXw2LZnZ+ueGdNxG+0calOJcWKbpFcuzLZ91YWq9Q==}
     engines: {node: '>= 0.10.0'}
+
+  external-remotes-plugin@1.0.0:
+    resolution: {integrity: sha512-19cfGfzmPMXkRNpyqOHgndNB07vjk1G1V7IuyixBw8Z1QTc/IOhINy9TbWzDRPTmj64e3STTI1MJE0gI58p7YA==}
+    peerDependencies:
+      webpack: ^5
 
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
@@ -10589,6 +10631,11 @@ snapshots:
       vary: 1.1.2
     transitivePeerDependencies:
       - supports-color
+
+  external-remotes-plugin@1.0.0(webpack@5.92.1):
+    dependencies:
+      webpack: 5.92.1
+      webpack-sources: 2.3.1
 
   fast-deep-equal@3.1.3: {}
 

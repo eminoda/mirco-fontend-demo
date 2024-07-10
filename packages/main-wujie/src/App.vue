@@ -9,12 +9,16 @@
     </el-menu>
 
     <router-view />
+
+    <h3>Foderation Module</h3>
+    <App2 />
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  components: { App2: () => import('vue2Component/App') },
   methods: {
     handleSelect() {},
   },
